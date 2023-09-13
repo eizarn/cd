@@ -3,7 +3,7 @@ const fs = require('fs');
 const os = require('os');
 
 // Get the greeting from the "GREETING" environment variable, or use a default value
-const greeting = process.env.GREETING || 'Hello World!';
+const greeting = process.env.GREETING || 'You expected a "Hello World", but it was me, DIO!';
 
 // Get the file path from the "FILE_PATH" environment variable, or use a default value
 const filePath = process.env.FILE_PATH || '/var/secret/secret.txt';
