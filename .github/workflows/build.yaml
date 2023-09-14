@@ -16,7 +16,7 @@ jobs:
             username: ${{ secrets.DOCKER_USERNAME }}
             password: ${{ secrets.DOCKER_PASSWORD }}
             registry: docker.io
-            repository: SecureContainProtect/cd
+            repository: securecontainprotect/cd
             tag_with_sha: true
 
         - name: Install NPM dependencies
