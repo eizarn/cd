@@ -19,6 +19,20 @@ jobs:
             repository: SecureContainProtect/cd
             tag_with_sha: true
 
+        - name: Install NPM dependencies
+          run: |
+            npm install --production --unsafe-perm
+        
+        - name: Archive dependency check reports
+          uses: actions/upload-artifact@v1
+          with:
+            name: reports
+            path: reports
+
+        - uses: sburris/dependency-check-action@master
+          with:
+            Project-Name: TestApp
+
     pmd:
         runs-on: ubuntu-latest
         steps:
